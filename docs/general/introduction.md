@@ -31,6 +31,11 @@ Here's a curated list of packages that you should have knowledge of, before star
 
 - [ ] [ESLint](http://eslint.org/)
 
+### Storybook
+
+- [ ] [React Storybook](https://github.com/storybooks/react-storybook)
+- [ ] [Storyshots](https://github.com/storybooks/storyshots)
+
 Note that while `react-boilerplate` includes a lot of features, many of them are optional and you can find instructions in the docs on how to remove...
 
 - [...`redux-saga` or `reselect`](https://github.com/react-boilerplate/react-boilerplate/blob/master/docs/js/remove.md).

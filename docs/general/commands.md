@@ -143,3 +143,36 @@ npm run lint
 
 Lints your JavaScript.
 
+## Storybook
+
+```Shell
+npm run storybook
+```
+
+This command will run `react-storybook` on port `6006`. You can develop
+components in isolation writing stories for your storybook and testing them in `react-storybook` main page.
+
+### Testing
+
+```Shell
+npm run storybook:test
+```
+
+This command will run `storyshots`, a utility for generating snapshots with jest for each story written.
+
+### Building
+
+```Shell
+npm run storybook:build
+```
+
+This command will build the storybook static assets in a folder so you can run it in a webserver.
+
+### Publishing
+
+```Shell
+npm run storybook:publish
+```
+
+This command will build and push the storybook static files to a `gh-pages` branch, then log the URL for you to access.
+

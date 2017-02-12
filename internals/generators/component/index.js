@@ -33,6 +33,11 @@ module.exports = {
     name: 'wantMessages',
     default: true,
     message: 'Do you want i18n messages (i.e. will this component use text)?',
+  }, {
+    type: 'confirm',
+    name: 'itsComposition',
+    default: false,
+    message: 'Do this component will be composed of other components? (if yes it means it belongs to compositions folder, not components)',
   }],
   actions: (data) => {
     // Generate index.js and index.test.js
@@ -55,16 +60,22 @@ module.exports = {
         componentTemplate = './component/es6.js.hbs';
       }
     }
+    const outputDir = data.itsComposition ? 'compositions' : 'components';
 
     const actions = [{
       type: 'add',
-      path: '../../app/components/{{properCase name}}/index.js',
+      path: `../../app/${outputDir}/{{properCase name}}/index.js`,
       templateFile: componentTemplate,
       abortOnFail: true,
     }, {
       type: 'add',
-      path: '../../app/components/{{properCase name}}/tests/index.test.js',
+      path: `../../app/${outputDir}/{{properCase name}}/tests/index.test.js`,
       templateFile: './component/test.js.hbs',
+      abortOnFail: true,
+    }, {
+      type: 'add',
+      path: `../../app/${outputDir}/{{properCase name}}/stories/index.story.js`,
+      templateFile: './component/story.js.hbs',
       abortOnFail: true,
     }];
 
@@ -72,7 +83,7 @@ module.exports = {
     if (data.wantMessages) {
       actions.push({
         type: 'add',
-        path: '../../app/components/{{properCase name}}/messages.js',
+        path: `../../app/${outputDir}/{{properCase name}}/messages.js`,
         templateFile: './component/messages.js.hbs',
         abortOnFail: true,
       });

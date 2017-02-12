@@ -1,0 +1,28 @@
+/**
+*
+* {{ properCase name }}
+*
+*/
+
+import React from 'react';
+import {{ properCase name }} from '../';
+
+import { storiesOf, action } from '@kadira/storybook';
+
+{{#if wantMessages}}
+storiesOf('{{ properCase name }}', module)
+  .addWithIntl('Normal state', () => (
+    <{{ properCase name }} onClick={action('{{ properCase name }} was clicked')} />
+  ), {
+// Insert here the languages you need to see in the storybook.
+//    pt: {
+//      'app.components.{{ properCase name }}.header': 'Ajuda Pet',
+//    },
+  });
+{{else}}
+storiesOf('{{ properCase name }}', module)
+  .add('Normal state', () => (
+    <{{ properCase name }} onClick={action('{{ properCase name }} was clicked')} />
+  ))
+{{/if}}
+

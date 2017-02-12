@@ -80,6 +80,20 @@
   <dd>We support SEO (document head tags management) for search engines that support indexing of JavaScript content. (eg. Google)</dd>
 </dl>
 
+## This Fork's Features
+
+**!!**: These are **NON-OFFICIAL** features from the original boilerplate. Some of these features are not planned by the original maintainers for the original project, that's why I created this fork.
+<dl>
+  <dt>Storybooks<dt>
+  <dd>See and develop your components independently from your project.</dd>
+
+  <dt>Storyshots<dt>
+  <dd>Create and use snapshots of your components stories, automating structural testing.</dd>
+
+  <dt>Publish your Storybook</dt>
+  <dd>You can publish a static version of your storybook in Github Pages.</dd>
+</dl>
+
 But wait... there's more!
 
   - *The best test setup:* Automatically guarantee code quality and non-breaking
@@ -114,6 +128,8 @@ Now you're ready to rumble!
 - [**Commands**](docs/general/commands.md): Getting the most out of this boilerplate
 - [Testing](docs/testing): How to work with the built-in test harness
 - [Styling](docs/css): How to work with the CSS tooling
+- [Storybook](docs/storybook): How to work with Storybooks.
+- [Storyshots](docs/storyshots): How to snapshot test a story from React Storybook.
 - [Your app](docs/js): Supercharging your app with Routing, Redux, simple
   asynchronicity helpers, etc.
 
