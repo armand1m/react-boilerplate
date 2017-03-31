@@ -6,7 +6,7 @@ import pt from 'react-intl/locale-data/pt';
 setAddon(IntlAddon);
 addLocaleData(pt);
 
-const req = require.context('../app', true, /.story.js$/);
+const req = require.context('../app', true, /(stor(y|ies).js|.stor(y|ies).js$)/);
 
 function loadStories() {
   req.keys().forEach((filename) => req(filename));
